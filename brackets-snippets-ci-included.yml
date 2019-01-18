@@ -1,0 +1,886 @@
+- trigger: cl
+  scope: javascript
+  description: console.log
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.log(${1:obj});${2}
+
+- trigger: cd
+  scope: javascript
+  description: console.dir
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.dir(${1:obj});${2}
+
+- trigger: ce
+  scope: javascript
+  description: console.error
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.error(${1:obj});${2}
+
+- trigger: cll
+  scope: javascript
+  description: console.log
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.log('${1:obj}:', ${1:obj});${2}
+
+- trigger: cdd
+  scope: javascript
+  description: console.dir
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.dir('${1:obj}:', ${1:obj});${2}
+
+- trigger: cee
+  scope: javascript
+  description: console.error
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.error('${1:obj}:', ${1:obj});${2}
+
+- trigger: ae
+  scope: javascript
+  description: document.addEventListener
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.addEventListener('${2:event}', function(e) {
+          ${3}
+        });
+
+- trigger: ac
+  scope: javascript
+  description: document.appendChild
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.appendChild(${2:elem});${3}
+
+- trigger: rc
+  scope: javascript
+  description: document.removeChild
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.removeChild(${2:elem});${3}
+
+- trigger: cel
+  scope: javascript
+  description: document.createElement
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.createElement(${2:elem});${3}
+
+- trigger: gi
+  scope: javascript
+  description: document.getElementById
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementById('${2:id}');${3}
+
+- trigger: gc
+  scope: javascript
+  description: document.getElementsByClassName
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementsByClassName('${2:class}');${3}
+
+- trigger: gt
+  scope: javascript
+  description: document.getElementsByTagName
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementsByTagName('${2:tag}');${3}
+
+- trigger: qs
+  scope: javascript
+  description: document.querySelector
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.querySelector('${2:selector}');${3}
+
+- trigger: qsa
+  scope: javascript
+  description: document.querySelectorAll
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.querySelectorAll('${2:selector}');${3}
+
+- trigger: fe
+  scope: javascript
+  description: forEach
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:myArray}.forEach(function (${2:elem}) {
+          ${3}
+        });
+
+- trigger: fi
+  scope: javascript
+  description: for in
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        for (${1:prop} in ${2:obj}) {
+          if (${2:obj}.hasOwnProperty(${1:prop})) {
+            ${3}
+          }
+        }
+
+- trigger: fn
+  scope: javascript
+  description: function
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        function ${1:methodName} (${2:arguments}) {
+          ${3}
+        }
+
+- trigger: afn
+  scope: javascript
+  description: anonymous function
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        function (${1:arguments}) {
+          ${2}
+        }
+
+- trigger: pr
+  scope: javascript
+  description: prototype
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:ClassName}.prototype.${2:methodName} = function (${3:arguments}) {
+          ${4}
+        };
+
+- trigger: sw
+  scope: javascript
+  description: switch statement
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        switch(${1:expression}) {
+          case ${2:value}:
+            ${3}
+            break;
+          default:
+            break;
+        }
+
+- trigger: si
+  scope: javascript
+  description: setInterval
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        setInterval(function() {
+          ${2}
+        }, ${1:delay});
+
+- trigger: st
+  scope: javascript
+  description: setTimeout
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        setTimeout(function() {
+          ${2}
+        }, ${1:delay});
+
+- trigger: if
+  scope: php
+  description: if
+  source: system
+  text: |
+        if (${1:condition})
+        {
+          ${2}
+        }
+
+- trigger: ifelse
+  scope: php
+  description: if else
+  source: system
+  text: |
+        if (${1:condition})
+        {
+          ${2}
+        }
+        else
+        {
+          ${3}
+        }
+
+- trigger: ifelse1
+  scope: php
+  description: if else
+  source: system
+  text: |
+        if (${1:condition})
+        {
+          ${2}
+        }
+        else
+        {
+          ${3}
+        }
+
+- trigger: if?
+  scope: php
+  description: if ternary
+  source: system
+  text: |
+        $${1:var}= (${2:condition}) ? ${3:TRUE} : ${4:FALSE};
+
+- trigger: ifalt
+  scope: php
+  description: if alternative
+  source: system
+  text: |
+        if (${1:condition})
+          ${2}
+        endif;
+
+- trigger: for
+  scope: php
+  description: for
+  source: system
+  text: |
+        for ($i = ${1:init}; $i < ${2:length}; $i++)
+        {
+          ${3}
+        }
+
+- trigger: foreach
+  scope: php
+  description: foreach value
+  source: system
+  text: |
+        foreach ($${1:var} as $${2:value})
+        {
+          ${3}
+        }
+
+- trigger: foreachalt
+  scope: php
+  description: foreach value alternative
+  source: system
+  text: |
+        foreach ($${1:var} as $${2:value}):
+         ${3}
+        endforeach;
+
+- trigger: foreachkeyalt
+  scope: php
+  description: foreach alternative
+  source: system
+  text: |
+        foreach ($${1:var} as $${3:value}):
+         ${4}
+        endforeach;
+
+- trigger: switch
+  scope: php
+  description: switch
+  source: system
+  text: |
+        switch ($${1:var})
+        {
+          case ${2:'value'}:
+            ${3}
+            break;
+        
+          default:
+            break;
+        }
+
+- trigger: switchalt
+  scope: php
+  description: switch alternative
+  source: system
+  text: |
+        switch ($${1:var}):
+          case ${2:'value'}:
+            ${3}
+            break;
+        
+          default:
+            break;
+        endswitch;
+
+- trigger: vardump
+  scope: php
+  description: var_dump
+  source: system
+  text: |
+        var_dump($${1:var});
+
+- trigger: printr
+  scope: php
+  description: print_r
+  source: system
+  text: |
+        print_r($${1:var});
+
+- trigger: fu
+  scope: php
+  description: function
+  source: system
+  text: |
+        ${1:public} function ${2:FunctionName} ($${3:value} = ${4:''})
+        {
+          ${5}
+        }
+
+- trigger: echo
+  scope: php
+  description: echo string
+  source: system
+  text: |
+        echo '${1:string}';
+
+- trigger: echovar
+  scope: php
+  description: echo variable
+  source: system
+  text: |
+        echo $${1:var};
+
+- trigger: echostringvar
+  scope: php
+  description: echo string and variable
+  source: system
+  text: |
+        echo '${1:string}' . $${2:var};
+
+- trigger: br
+  scope: php
+  description: echo html br
+  source: system
+  text: |
+        echo '</br>';
+
+- trigger: empty
+  scope: php
+  description: empty
+  source: system
+  text: |
+        empty($${1:var});
+
+- trigger: isset
+  scope: php
+  description: isset
+  source: system
+  text: |
+        isset($${1:var});
+
+- trigger: empty1
+  scope: php
+  description: empty
+  source: system
+  text: |
+        empty($${1:var});
+
+- trigger: array
+  scope: php
+  description: array
+  source: system
+  text: |
+        array(${1:value});
+
+- trigger: arrayasoc
+  scope: php
+  description: array associative
+  source: system
+  text: |
+        array(${1:key} => ${2:value});
+
+- trigger: array1
+  scope: php
+  description: array
+  source: system
+  text: |
+        array(${1:value});
+
+- trigger: arrayasoc1
+  scope: php
+  description: array associative
+  source: system
+  text: |
+        array(${1:key} => ${2:value});
+
+- trigger: jsonencode
+  scope: php
+  description: json encode
+  source: system
+  text: |
+        json_encode(${1:data});
+
+- trigger: jsondecode
+  scope: php
+  description: json decode
+  source: system
+  text: |
+        json_decode(${1:data});
+
+- trigger: arrayasoc2
+  scope: php
+  description: array associative
+  source: system
+  text: |
+        array(${1:key} => ${2:value});
+
+- trigger: $
+  scope: php
+  description: new variable
+  source: system
+  text: |
+        $${1:var} = ${2:value};
+
+- trigger: date
+  scope: php
+  description: php date
+  source: system
+  text: |
+        date('${1}')
+
+- trigger: dateo
+  scope: php
+  description: php DateTime
+  source: system
+  text: DateTime()
+- trigger: urldecode
+  scope: php
+  description: url decode
+  source: system
+  text: |
+        urldecode(${1:str})
+
+- trigger: urlencode
+  scope: php
+  description: url encode
+  source: system
+  text: |
+        urlencode(${1:str})
+
+- trigger: array_sort
+  scope: php
+  description: url encode
+  source: system
+  text: |
+        asort(${1:array})
+
+- trigger: array_sort_reverse
+  scope: php
+  description: url encode
+  source: system
+  text: |
+        arsort(${1:array})
+
+- trigger: calendar
+  description: CI - Calendar Helper
+  scope: php
+  mTime: 1547791865117
+  text: |
+        $this->load->library('calendar');\r
+        \r
+        $data = array(\r
+            'day'  => 'link',\r
+            'day'  => 'link'\r
+        );\r
+        \r
+        echo $this->calendar->generate(year, month, $data);
+
+- trigger: anchor
+  description: CI - Anchor Helper
+  scope: php
+  mTime: 1547791984448
+  text: |
+        anchor('url', 'linkname', 'attributes');
+
+- trigger: db_delete
+  description: CI - Active Record DB Delete
+  scope: php
+  mTime: 1547792142702
+  text: |
+        $this->db->delete('Table');
+
+- trigger: db_free_result
+  description: CI - Active Record DB Free Result
+  scope: php
+  mTime: 1547792182949
+  text: |
+        $Var->free_result();
+
+- description: CI - Active Record DB Get
+  trigger: db_get
+  scope: php
+  mTime: 1547792216401
+  text: |
+        $this->db->get('Table', limit, offset);
+
+- trigger: db_insert
+  description: CI - Active Record DB Insert
+  scope: php
+  mTime: 1547792288060
+  text: |
+        $this->db->insert('Table', $object);
+
+- trigger: db_join
+  description: CI - Active Record DB Join
+  scope: php
+  mTime: 1547792358757
+  text: |
+        $this->db->join('Table', 'table.column = table.column', 'left');
+
+- trigger: db_num_fields
+  description: CI - Active Record DB Num Fields
+  scope: php
+  mTime: 1547792386209
+  text: |
+        $Var->num_fields();
+
+- trigger: db_num_rows
+  description: CI - Active Record DB Num Rows
+  scope: php
+  mTime: 1547792432639
+  text: |
+        $Var->num_rows();
+
+- trigger: db_result
+  description: CI - Active Record DB Result
+  scope: php
+  mTime: 1547792456738
+  text: |
+        $Var->result();
+
+- trigger: db_result_array
+  description: CI - Active Record DB Result Array
+  scope: php
+  mTime: 1547792502230
+  text: |
+        $Var->result_array();
+
+- trigger: db_row
+  description: CI - Active Record DB Row
+  scope: php
+  mTime: 1547792532414
+  text: |
+        $Var->row();
+
+- trigger: db_select
+  description: CI - Active Record DB Select
+  scope: php
+  mTime: 1547792558255
+  text: |
+        $this->db->select('field1, field2');
+
+- trigger: db_update
+  description: CI - Active Record DB Update
+  scope: php
+  mTime: 1547792587798
+  text: |
+        $this->db->update('Table', $object);
+
+- trigger: db_where
+  description: CI - Active Record DB Where
+  scope: php
+  mTime: 1547792617141
+  text: |
+        $this->db->where('Field / comparison', $Value);
+
+- trigger: flashdata
+  description: CI - Flashdata
+  scope: php
+  mTime: 1547792645886
+  text: |
+        $this->session->flashdata('name');
+
+- trigger: form_checkbox
+  description: CI - Form Helper - Checkbox
+  scope: php
+  mTime: 1547792709094
+  text: |
+        form_checkbox(name, value, TRUE);
+
+- trigger: form_close
+  description: CI - Form Helper - Close
+  scope: php
+  mTime: 1547792743167
+  text: form_close();
+- trigger: form_input
+  description: CI - Form Helper - Input Field
+  scope: php
+  mTime: 1547792773798
+  text: |
+        form_input('name', 'value', $attributes);
+
+- trigger: form_label
+  description: CI - Form Helper - Label
+  scope: php
+  mTime: 1547792793063
+  text: |
+        form_label('What is your Name', 'username', $attributes);
+
+- trigger: form_open
+  description: CI - Form Open
+  scope: php
+  mTime: 1547792822053
+  text: |
+        form_open('url', '', $hidden);
+
+- trigger: form_submit
+  description: CI - Form Helper - Submit
+  scope: php
+  mTime: 1547792845799
+  text: |
+        form_submit('name', 'value');
+
+- trigger: form_validation
+  description: CI - Form Validation Rule
+  scope: php
+  mTime: 1547792886030
+  text: |
+        $this->form_validation->set_rules('fieldname', 'fieldlabel', 'trim|required|min_length[5]|max_length[12]');
+
+- trigger: form_validation_run
+  description: CI - Form Validation Run
+  scope: php
+  mTime: 1547792929534
+  text: |
+        if ($this->form_validation->run() == TRUE or FALSE) {\r
+            # code...\r
+        } else {\r
+            # code...\r
+        }
+
+- description: CI - $_GET
+  trigger: _get
+  scope: php
+  mTime: 1547793016271
+  text: |
+        $this->input->get('name')
+
+- trigger: getpost
+  description: CI - $GET $POST
+  scope: php
+  mTime: 1547793072944
+  text: |
+        $this->input->get_post('name');
+
+- trigger: library
+  description: CI - New Library
+  scope: php
+  mTime: 1547793111998
+  text: |
+        defined('BASEPATH') OR exit('No direct script access allowed');\r
+        \r
+        class LibraryName\r
+        {\r
+            protected $ci;\r
+        \r
+            public function __construct()\r
+            {\r
+                $this->ci =& get_instance();\r
+            }\r
+        \r
+            \r
+        \r
+        }\r
+        \r
+        /* End of file LibraryName.php */
+
+- trigger: load_helper
+  description: CI - Load Helper File
+  scope: php
+  mTime: 1547793135565
+  text: |
+        $this->load->helper('Helper Name');
+
+- trigger: load_model
+  description: CI - Load Model
+  scope: php
+  mTime: 1547793159717
+  text: |
+        $this->load->model('Model File');
+
+- trigger: model
+  description: CI - Base Model
+  scope: php
+  mTime: 1547793201565
+  text: |
+        defined('BASEPATH') OR exit('No direct script access allowed');\r
+        \r
+        class ModelName extends CI_Model {\r
+        \r
+            \r
+        \r
+        }\r
+        \r
+        /* End of file ModelName.php */
+
+- trigger: _post
+  description: CI - $_POST
+  scope: php
+  mTime: 1547793234750
+  text: |
+        $this->input->post('name');
+
+- trigger: _redirect
+  description: CI - URL Helper - redirect with response code
+  scope: php
+  mTime: 1547793272680
+  text: |
+        redirect('','location',);
+
+- trigger: redirect
+  description: CI - URL Helper - redirect
+  scope: php
+  mTime: 1547793302691
+  text: |
+        redirect('','refresh');
+
+- trigger: session_all_userdata
+  description: CI - Session - Retrieving All Session Data
+  scope: php
+  mTime: 1547793357231
+  text: |
+        $this->session->all_userdata();
+
+- trigger: session_sess_destroy
+  description: CI - Session - Destroying a Session
+  scope: php
+  mTime: 1547793385311
+  text: |
+        $this->session->sess_destroy();
+
+- trigger: session_set_userdata
+  description: CI - Session - Adding Custom Session Data
+  scope: php
+  mTime: 1547793409111
+  text: |
+        $array = array(\r
+            'key' => 'value'\r
+        );\r
+        \r
+        $this->session->set_userdata( $array );
+
+- trigger: session_unset_userdata
+  description: CI - Session - Removing Session Data
+  scope: php
+  mTime: 1547793431273
+  text: |
+        $this->session->unset_userdata('some_name');
+
+- trigger: session_userdata
+  description: CI - Session - Retrieving Session Data
+  scope: php
+  mTime: 1547793466590
+  text: |
+        $this->session->userdata('item');
+
+- trigger: set_cookie
+  description: CI - Set Cookie
+  scope: php
+  mTime: 1547793492664
+  text: |
+        $this->input->set_cookie('name', 'value', 'expire', 'domain', 'path','prefix', 'secure');
+
+- trigger: set_flashdata
+  description: CI - Set flashdata
+  scope: php
+  mTime: 1547793529174
+  text: |
+        $this->session->set_flashdata('name', 'value');
+
+- trigger: upload
+  description: CI - Upload Boilerplate
+  scope: php
+  mTime: 1547793564423
+  text: |
+        $config['upload_path'] = './uploads/';\r
+        $config['allowed_types'] = 'gif|jpg|png';\r
+        $config['max_size']  = '100';\r
+        $config['max_width']  = '1024';\r
+        $config['max_height']  = '768';\r
+        \r
+        $this->load->library('upload', $config);\r
+        \r
+        if ( ! $this->upload->do_upload()){\r
+            $error = array('error' => $this->upload->display_errors());\r
+        }\r
+        else{\r
+            $data = array('upload_data' => $this->upload->data());\r
+            echo "success";\r
+        }
+
+- trigger: uri_segment
+  description: CI - URI Segment
+  scope: php
+  mTime: 1547793587754
+  text: |
+        $this->uri->segment(3)
+
+- trigger: user_agent
+  description: CI - Get user agent
+  scope: php
+  mTime: 1547793607703
+  text: |
+        $this->input->user_agent()
+
+- trigger: valid_ip
+  description: CI - Valid IP
+  scope: php
+  mTime: 1547793629951
+  text: |
+        $this->input->valid_ip('ip')
+
+- trigger: css
+  scope: html
+  description: Style Tag
+  source: system
+  text: |
+        <style type="text/css">${1}</style>${2}
+
